@@ -24,24 +24,51 @@ function User()
 
 function playRound(playerSelection, computerSelection) 
 {
+    var compscore = 0;
+    var playerscore = 0;
     //if statement checks for each player choice and decides who is the winner depending on the actions
-    var UserWins = 0;
-    var CpuWins = 0;
-    var result;
-   if(playerSelection == "rock" && computerSelection == "paper")
-   {
-    result = console.log("Computer wins");
-    CpuWins += 1;
-    console.log("User:"+ UserWins + " Cpu Wins" + CpuWins);
-   } else if(computerSelection == "rock" && playerSelection == "paper")
-   {
-        result = console.log("Player wins");
-        UserWins +=1;
-        console.log("User:"+ UserWins + "Cpu Wins" + CpuWins);
-   }
+    if(playerSelection == computerSelection )
+    {
+        console.log("TIE GAME")
+    } else if (computerSelection == "rock" && playerSelection == "scissor" ||
+                computerSelection =="scissor" && playerSelection == "paper"||
+                computerSelection =="paper" && playerSelection == "rock"
+              ) {
+                compscore = ++compscore;
+                if(compscore == 1)
+                {
+                    console.log("your losing mate");
+                } else if( compscore == 2)
+                    {
+                        console.log("test 2");
+                    } else if(compscore == 3)
+                    {
+                        console.log("shiii");
+                    } else
+                    {
+                        console.log("CPU wins")
+                    } 
 
+                    } else {
+                        playerscore == ++playerscore;
+                        if(playerscore == 1)
+                        {
+                            console.log("pog human");
+                        } else if(playerscore == 2)
+                        {
+                            console.log("pog human again");
+                        } else {
+                            console.log("human win");
+                        }
+                    }
+              
+      
+}
+
+function game(user,cpu)
+{
+    
    
-   return result;
 }
 
 var PSelect = User();
