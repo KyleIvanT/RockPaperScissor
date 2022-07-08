@@ -24,13 +24,20 @@ function User()
 
 function playRound(playerSelection, computerSelection) 
 {
+    //if statement checks for each player choice and decides who is the winner depending on the actions
+    var UserWins = 0;
+    var CpuWins = 0;
     var result;
    if(playerSelection == "rock" && computerSelection == "paper")
    {
     result = console.log("Computer wins");
+    CpuWins += 1;
+    console.log("User:"+ UserWins + " Cpu Wins" + CpuWins);
    } else if(computerSelection == "rock" && playerSelection == "paper")
    {
         result = console.log("Player wins");
+        UserWins +=1;
+        console.log("User:"+ UserWins + "Cpu Wins" + CpuWins);
    }
 
    
