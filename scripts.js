@@ -65,14 +65,23 @@ function playRound(playerSelection, computerSelection)
       
 }
 
-function game(user,cpu)
+function game(user,comp)
 {
+  var endgame;
+
+  for(endgame = 0; endgame <= 5; endgame++)
+  {
     
-   
+  }
 }
 
 var PSelect = User();
 var CSelect = computerPlay();
-console.log(playRound(PSelect,CSelect));
+console.log(game(PSelect,CSelect));
 
 
+const btn = document.querySelector('#selection');
+btn.addEventListener('click',playRound)
+{
+    alert("TESTING");
+}
